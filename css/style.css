@@ -4,6 +4,14 @@
     font-style: normal; 
 }
 
+:root {
+    --dark-blue: #0B132B;
+    --medium-blue: #1C2541;
+    --cyan: #00B4D8;
+    --white: #FFFFFF;
+    --light-gray: #EAEAEA;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +20,44 @@
 
 body {
     font-family: "Space Grotesk", sans-serif;
-    background-color: #0B132B;
-    color: white;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+
+    background-color: var(--medium-blue);
+
+    position: sticky;
+    top: 0;
+}
+
+.logo h1 {
+    font-family: "Limelight", sans-serif;
+    font-size: 2rem;
+    color: var(--cyan);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cyan);
 }
